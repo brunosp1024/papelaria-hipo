@@ -7,7 +7,7 @@ const Welcome = () => {
         <div className="welcome mx-3">
             <div className="mt-4">
                 <h1>Bem vindo a Papelaria HIPO</h1>
-                <p className="p-0 m-0 text-center">Abra o menu para acessar os dados do sistema</p>
+                <p className="p-0 m-0 text-center">Abra o menu no canto superior esquerdo para acessar os dados.</p>
             </div>
             <div className="container-icon">
                 <ImNewspaper />
