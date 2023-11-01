@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # Installed apps
     'rest_framework',
+    'drf_yasg',
 
     # Local apps
     'apps.core',
