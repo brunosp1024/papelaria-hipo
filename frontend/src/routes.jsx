@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Welcome from './pages/Welcome';
 import List from "./pages/Sales/List";
 import SalesForm from './pages/Sales/Form/SalesForm';
-import CommissionsList from './pages/commissions/List/CommissionsList';
+import CommissionsList from './pages/Commissions/List/CommissionsList';
 
 export function AppRoutes() {
     return (
