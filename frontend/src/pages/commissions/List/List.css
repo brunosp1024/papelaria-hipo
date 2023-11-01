@@ -1,0 +1,22 @@
+.commission-list {
+    justify-content: center;
+    height: 50vh;
+}
+
+.color-primary {
+    color: #00585E;
+}
+
+input[type=date]:valid::-webkit-datetime-edit {
+    color: #6e6e6e;
+    font-weight: 700;
+}
+
+.btn-get-commissions, .btn.disabled {
+    background-color: #00585E;
+    line-height: '15px';
+}
+
+.btn-get-commissions:hover {
+    background-color: #00464b;
+}
