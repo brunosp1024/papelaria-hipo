@@ -1,0 +1,26 @@
+.table-commissions {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 64px;
+}
+
+.table-commissions thead {
+    position: sticky;
+    top: 0;
+}
+
+.table-commissions tr td:last-child {
+    width: 170px;
+}
+
+.Info-commissions {
+    position: sticky;
+    bottom: 0;
+    background-color: #FFF;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.Info-commissions th:last-child {
+    margin-right: 73px;
+}
