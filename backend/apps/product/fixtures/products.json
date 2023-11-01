@@ -1,0 +1,392 @@
+[
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365368",
+        "fields": {
+            "code": "70731",
+            "description": "Fantastic Bronze Shirt",
+            "unit_price": "585.00",
+            "commission_percentage": "8",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365367",
+        "fields": {
+            "code": "50561",
+            "description": "Recycled Fresh Hat",
+            "unit_price": "736.00",
+            "commission_percentage": "7",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365359",
+        "fields": {
+            "code": "35372",
+            "description": "Handmade Frozen Chips",
+            "unit_price": "162.00",
+            "commission_percentage": "6",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365358",
+        "fields": {
+            "code": "56464",
+            "description": "Refined Soft Fish",
+            "unit_price": "836.00",
+            "commission_percentage": "6",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365357",
+        "fields": {
+            "code": "14137",
+            "description": "Recycled Metal Bike",
+            "unit_price": "386.00",
+            "commission_percentage": "3",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365356",
+        "fields": {
+            "code": "31860",
+            "description": "Licensed Bronze Shoes",
+            "unit_price": "195.00",
+            "commission_percentage": "2",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365545",
+        "fields": {
+            "code": "51422",
+            "description": "Unbranded Granite Pants",
+            "unit_price": "133.00",
+            "commission_percentage": "4",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365455",
+        "fields": {
+            "code": "36494",
+            "description": "Elegant Rubber Bike",
+            "unit_price": "510.00",
+            "commission_percentage": "5",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365333",
+        "fields": {
+            "code": "44939",
+            "description": "Refined Granite Pants",
+            "unit_price": "474.00",
+            "commission_percentage": "1",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365332",
+        "fields": {
+            "code": "82765",
+            "description": "Tasty Granite Shoes",
+            "unit_price": "478.00",
+            "commission_percentage": "2",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365331",
+        "fields": {
+            "code": "31192",
+            "description": "Elegant Plastic Pants",
+            "unit_price": "218.00",
+            "commission_percentage": "2",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365330",
+        "fields": {
+            "code": "17715",
+            "description": "Elegant Steel Chair",
+            "unit_price": "395.00",
+            "commission_percentage": "1",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365329",
+        "fields": {
+            "code": "64477",
+            "description": "Handcrafted Plastic Gloves",
+            "unit_price": "838.00",
+            "commission_percentage": "4",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365328",
+        "fields": {
+            "code": "34333",
+            "description": "Practical Concrete Bike",
+            "unit_price": "125.00",
+            "commission_percentage": "5",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365327",
+        "fields": {
+            "code": "32647",
+            "description": "Generic Steel Bacon",
+            "unit_price": "700.00",
+            "commission_percentage": "6",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365326",
+        "fields": {
+            "code": "36966",
+            "description": "Rustic Rubber Shoes",
+            "unit_price": "583.00",
+            "commission_percentage": "7",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365325",
+        "fields": {
+            "code": "55452",
+            "description": "Licensed Fresh Hat",
+            "unit_price": "743.00",
+            "commission_percentage": "8",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365324",
+        "fields": {
+            "code": "49699",
+            "description": "Luxurious Granite Soap",
+            "unit_price": "899.00",
+            "commission_percentage": "4",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365323",
+        "fields": {
+            "code": "77594",
+            "description": "Generic Concrete Pants",
+            "unit_price": "133.00",
+            "commission_percentage": "9",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365320",
+        "fields": {
+            "code": "32717",
+            "description": "Sleek Wooden Chair",
+            "unit_price": "141.00",
+            "commission_percentage": "9",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365319",
+        "fields": {
+            "code": "26369",
+            "description": "Intelligent Bronze Fish",
+            "unit_price": "330.00",
+            "commission_percentage": "9",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365318",
+        "fields": {
+            "code": "59094",
+            "description": "Licensed Cotton Chips",
+            "unit_price": "85.00",
+            "commission_percentage": "10",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365317",
+        "fields": {
+            "code": "30319",
+            "description": "Modern Frozen Gloves",
+            "unit_price": "297.00",
+            "commission_percentage": "0",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365316",
+        "fields": {
+            "code": "49054",
+            "description": "Bespoke Bronze Table",
+            "unit_price": "687.00",
+            "commission_percentage": "0",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365315",
+        "fields": {
+            "code": "35378",
+            "description": "Licensed Wooden Computer",
+            "unit_price": "964.00",
+            "commission_percentage": "1",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365314",
+        "fields": {
+            "code": "9725",
+            "description": "Small Rubber Shirt",
+            "unit_price": "290.00",
+            "commission_percentage": "0",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365313",
+        "fields": {
+            "code": "8006",
+            "description": "Practical Cotton Computer",
+            "unit_price": "360.00",
+            "commission_percentage": "0",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365312",
+        "fields": {
+            "code": "39852",
+            "description": "Gorgeous Plastic Chips",
+            "unit_price": "584.00",
+            "commission_percentage": "1",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365311",
+        "fields": {
+            "code": "85241",
+            "description": "Electronic Frozen Computer",
+            "unit_price": "619.00",
+            "commission_percentage": "0",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    },
+    {
+        "model": "product.product",
+        "pk": "13872b29-c76a-4e50-aee4-1f1178365310",
+        "fields": {
+            "code": "81676",
+            "description": "Tasty Fresh Gloves",
+            "unit_price": "849.00",
+            "commission_percentage": "3",
+            "created_at": "2023-09-17T13:44:03.433Z",
+            "updated_at": "2023-09-17T13:44:03.433Z",
+            "deleted_at": null
+        }
+    }
+]
