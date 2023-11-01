@@ -24,5 +24,6 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('', RedirectView.as_view(url=reverse_lazy('schema-swagger-ui'), permanent=False), name='index'),
     path('admin/', admin.site.urls),
+    path('api/v1/', include('apps.product.urls', namespace='products')),
     path('api/v1/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
