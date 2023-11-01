@@ -218,7 +218,7 @@ const List = () => {
                                     <td>{sale.customer}</td>
                                     <td>{sale.seller}</td>
                                     <td>{moment(sale.saleDate).format("DD/MM/YYYY - HH:mm")}</td>
-                                    <td>{sale.totalValue}</td>
+                                    <td>{formatToCurrencyBr(sale.totalValue)}</td>
                                     <td>
                                         <span className="more-items" data-toggle="collapse" onClick={() => hadleCollapse(sale.id)}
                                             data-target={`.sale-${sale.id}`} aria-controls={`multiCollapse${sale.id}`}>
