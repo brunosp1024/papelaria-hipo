@@ -17,7 +17,7 @@ const Sidebar = ({sidebar, showSidebar}) => {
                     <FaAngleRight style={{color: "#DADADA", fontSize: '25px'}}/>
                 </div>
             </Link>
-            <Link className='nav-link' to="/" onClick={showSidebar}>
+            <Link className='nav-link' to="/comissoes" onClick={showSidebar}>
                 <div className='d-flex align-items-center justify-content-between'>
                     <span>
                         <FaCalculator className='mx-3 mb-1'/>

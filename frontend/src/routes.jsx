@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Welcome from './pages/Welcome';
 import List from "./pages/Sales/List";
 import SalesForm from './pages/Sales/Form/SalesForm';
+import CommissionsList from './pages/commissions/List/CommissionsList';
 
 export function AppRoutes() {
     return (
@@ -11,6 +12,9 @@ export function AppRoutes() {
           <Route path="/vendas" element={<List />} />
           <Route path="/vendas/adicionar" element={<SalesForm />} />
           <Route path="/vendas/:id/atualizar" element={<SalesForm />} />
+        </Route>
+        <Route path="/comissoes">
+          <Route path="/comissoes" element={<CommissionsList />} />
         </Route>
       </Routes>
     )
