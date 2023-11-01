@@ -1,0 +1,25 @@
+.table-products th,
+.table-products td,
+.table-products tr {
+    border: none !important;
+    border-style: none !important;
+}
+
+.table-products td a {
+    padding: 6px 9px;
+}
+
+.table-products td a:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.container-products {
+    border-right: var(--bs-border-width) solid rgba(126, 126, 126, 0.3) !important;
+    height: 90%;
+}
+
+.container-products .table-responsive {
+    max-height: 100px !important;
+    overflow-y: auto !important;
+}
