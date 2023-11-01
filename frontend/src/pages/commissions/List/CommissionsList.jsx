@@ -1,10 +1,7 @@
 import "./List.css"
 import { BiSearchAlt2 } from 'react-icons/bi';
 import React, { useState } from "react";
-// import DatePicker from "react-datepicker"; removerrrrrr
 import Button from 'react-bootstrap/Button';
-
-import "react-datepicker/dist/react-datepicker.css";
 import DataTable from "./components/DataTable/DataTable";
 
 const CommissionsList = () => {
