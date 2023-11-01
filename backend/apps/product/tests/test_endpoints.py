@@ -15,7 +15,6 @@ class TestProductEndpoints:
         baker.make(Product, _quantity=3)
         response = client.get(self.endpoint)
         assert response.status_code == 200
-        print(json.loads(response.content))
         assert len(json.loads(response.content)) == 3
 
     def test_create_new_product(self, client, instance_product_dict):
