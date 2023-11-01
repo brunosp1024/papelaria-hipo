@@ -1,0 +1,39 @@
+.table.container-sales-list {
+    margin: 80px auto;
+    min-width: 900px;
+}
+
+.more-items {
+    color: #00585E;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container-sales-list table tr td, tr th {
+    width: auto;
+}
+
+.container-sales-list table tr td:last-child {
+    width: 170px;
+}
+
+.container h2 {
+    color: #00585E
+}
+
+tr.child-list, .child-list th, .child-list tr, .child-list td {
+    border: none;
+}
+
+.rowInfo th {
+    color: #00585E !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.style-table {
+    max-height: 500px;
+    overflow-y: auto;
+}
