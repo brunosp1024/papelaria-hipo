@@ -3,7 +3,6 @@ import base64
 
 from rest_framework.test import APIClient
 from model_bakery import baker
-# from django.contrib.auth.models import User
 from apps.product.models import Product
 
 
