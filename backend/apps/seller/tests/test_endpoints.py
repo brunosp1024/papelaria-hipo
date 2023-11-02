@@ -15,7 +15,6 @@ class TestSellerEndpoints:
         baker.make(Seller, _quantity=3)
         response = client.get(self.endpoint)
         assert response.status_code == 200
-        print(json.loads(response.content))
         assert len(json.loads(response.content)) == 3
 
     def test_create_new_seller(self, client, instance_seller_dict):
@@ -25,8 +24,6 @@ class TestSellerEndpoints:
             format='json'
         )
         response_dict = json.loads(response.content.decode('utf-8'))
-        print(instance_seller_dict)
-        print(response_dict)
         assert response.status_code == 201
         assert all(item in response_dict.items() for item in instance_seller_dict.items()) == True
 

@@ -15,7 +15,6 @@ class TestCustomerEndpoints:
         baker.make(Customer, _quantity=3)
         response = client.get(self.endpoint)
         assert response.status_code == 200
-        print(json.loads(response.content))
         assert len(json.loads(response.content)) == 3
 
     def test_create_new_customer(self, client, instance_customer_dict):
@@ -25,8 +24,6 @@ class TestCustomerEndpoints:
             format='json'
         )
         response_dict = json.loads(response.content.decode('utf-8'))
-        print(instance_customer_dict)
-        print(response_dict)
         assert response.status_code == 201
         assert all(item in response_dict.items() for item in instance_customer_dict.items()) == True
 
