@@ -18,7 +18,7 @@ const List = () => {
     const [id, setId] = useState(null);
 
     useEffect(() => {
-        loadSales();
+        getSales();
     }, []);
 
     const handleDelete = async (id) => {
@@ -28,7 +28,7 @@ const List = () => {
 
     const handleModalDelete = () => {
         handleClose();
-        loadSales();
+        getSales();
       };
 
     const handleClose = () => {
@@ -36,7 +36,7 @@ const List = () => {
         setId(null);
       };
 
-    const loadSales = () => {
+    const getSales = () => {
         axios.get('/sales')
             .then((response) => {
                 setSalesList(response.data);
@@ -89,9 +89,9 @@ const List = () => {
                             <Fragment key={sale.sale_id}>
                                 <tr>
                                     <td>{sale.invoice}</td>
-                                    <td>{sale.customer}</td>
-                                    <td>{sale.seller}</td>
-                                    <td>{moment(sale.saleDate).format("DD/MM/YYYY - HH:mm")}</td>
+                                    <td>{sale.customer_name}</td>
+                                    <td>{sale.seller_name}</td>
+                                    <td>{moment(sale.date).format("DD/MM/YYYY - HH:mm")}</td>
                                     <td>{formatToCurrencyBr(sale.total)}</td>
                                     <td>
                                         <span className="more-items" data-toggle="collapse" onClick={() => hadleCollapse(sale.sale_id)}
@@ -121,7 +121,7 @@ const List = () => {
                                                 <tbody>
                                                     {sale.items.length ? sale.items.map((item) => (
                                                         <tr key={item.sale_item_id}>
-                                                            <td>{item.product}</td>
+                                                            <td>{item.product_name}</td>
                                                             <td>{item.quantity}</td>
                                                             <td>{formatToCurrencyBr(item.product_price)}</td>
                                                             <td>{formatToCurrencyBr(item.item_total)}</td>
@@ -131,12 +131,15 @@ const List = () => {
                                                       )) : <tr><td className="py-4 text-center" colSpan={6}>
                                                                 Lista vazia <TbMoodEmpty className="fs-4"/></td></tr>
                                                     }
-                                                    <tr className="rowInfo">
-                                                        <th>Total venda</th>
-                                                        <th colSpan={2}>{sale.total_quantity}</th>
-                                                        <th colSpan={2}>{formatToCurrencyBr(sale.total)}</th>
-                                                        <th>{formatToCurrencyBr(sale.commission_total)}</th>
-                                                    </tr>
+                                                    {
+                                                        sale.items.length ?
+                                                            <tr className="rowInfo">
+                                                                <th>Total venda</th>
+                                                                <th colSpan={2}>{sale.total_quantity}</th>
+                                                                <th colSpan={2}>{formatToCurrencyBr(sale.total)}</th>
+                                                                <th>{formatToCurrencyBr(sale.commission_total)}</th>
+                                                            </tr> : null
+                                                    }
                                                 </tbody>
                                             </Table>
                                         </td>
