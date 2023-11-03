@@ -18,12 +18,13 @@ const SaleItemsList = ({addedProducts, onDelete}) => {
                 </thead>
                 <tbody>
                     {addedProducts.map(product => {
-                        return (<tr key={product.product.label}>
-                            <td>{product.product.label}</td>
+                        return (
+                        <tr key={product.value}>
+                            <td>{product.label}</td>
                             <td>{product.quantity}</td>
-                            <td>{formatToCurrencyBr(product.product.price)}</td>
+                            <td>{formatToCurrencyBr(product.price)}</td>
                             <td>
-                                {formatToCurrencyBr(parseFloat(product.product.price) * product.quantity)}
+                                {formatToCurrencyBr(parseFloat(product.price) * product.quantity)}
                             </td>
                             <td>
                                 <a className="text-danger" onClick={() => onDelete(product)} href="#!"><FaTrash /></a>
