@@ -71,14 +71,9 @@ docker-compose exec api python manage.py loaddata sales.json
 docker-compose exec api python manage.py loaddata sale_items.json
 ```
 
+## Endereço para acessar o sistema no navegador
 
-#### 7. Criar um super usuário para acessar os endpoints do sistema
-
-```shell script
-docker-compose exec api python manage.py createsuperuser
-```
-
-***
+http://localhost:3000/
 
 ## Acessando todos os endpoints da api 📌
 
