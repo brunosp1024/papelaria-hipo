@@ -4,10 +4,10 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Select from 'react-select';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../../../axios.js';
 
 const AddSaleItem = ({toAddProduct}) => {
-    const [product, setProduct] = useState('')
+    const [product, setProduct] = useState()
     const [quantity, setQuantity] = useState('')
     const [productList, setProductList] = useState([]);
 
@@ -16,11 +16,11 @@ const AddSaleItem = ({toAddProduct}) => {
     }, []);
 
     const getData = () => {
-        axios.get(`https://653c42afd5d6790f5ec7e632.mockapi.io/products`)
+        axios.get("/products")
             .then((response) => {
                 setProductList(
                     response.data.map((p) => (
-                        { value: p.id, label: `${p.code} - ${p.description}`, price: p.unitValue }
+                        { value: p.product_id, label: `${p.code} - ${p.description}`, price: p.unit_price }
                     ))
                 )
         })
@@ -29,9 +29,10 @@ const AddSaleItem = ({toAddProduct}) => {
     const atSave = (e) => {
         e.preventDefault()
         toAddProduct({
-            'product': product,
+            'value': product.value,
+            'label': product.label,
             'quantity': quantity,
-            'total': parseFloat(product.price) * parseFloat(quantity)
+            'price': product.price
         })
         setProductList(
             productList.filter(function(p) { return p.value !== product.value })
