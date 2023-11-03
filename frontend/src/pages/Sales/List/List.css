@@ -34,6 +34,7 @@ tr.child-list, .child-list th, .child-list tr, .child-list td {
 }
 
 .style-table {
+    min-height: 450px;
     max-height: 500px;
     overflow-y: auto;
 }
