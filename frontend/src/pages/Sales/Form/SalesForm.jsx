@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { formatToCurrencyBr } from "../../../Utils/formatCurrency";
-import axios from 'axios';
+import axios from '../../../axios.js';
 import AddSaleItem from "../components/AddSaleItem.jsx";
 import SaleItemsList from "../components/SaleItemsList.jsx";
 import SelectDropdown from "../components/SelectDropdown";
@@ -18,138 +18,82 @@ import 'react-toastify/dist/ReactToastify.css';
 const SalesForm = () => {
     let navigate = useNavigate();
     const { id } = useParams();
-    const [date, setDate] = useState(moment(new Date()).format("DD/MM/YYYY - HH:mm"));
-    const baseUrl = 'https://api.mockfly.dev/mocks/b71e0a83-72ad-41f3-8759-89e8ad0ba88a';
+    const [date, setDate] = useState(new Date());
 
     const [addedProducts, setAddedProducts] = useState([]);
     const [salesTotal, setSalesTotal] = useState('0,00');
-    const [seller, setSeller] = useState('');
-    const [customer, setCustomer] = useState('');
+    const [seller, setSeller] = useState();
+    const [customer, setCustomer] = useState();
+    const [sellerList, setSellerList] = useState([]);
+    const [customerList, setCustomerList] = useState([]);
     const [invoice, setInvoice] = useState('');
 
-    const sellers = [
-        {
-          "id": 1,
-          "name": "Naruto Uzumaki",
-          "email": "detabayou@gmail.com",
-          "phone": " (87) 9 9635-8234"
-        },
-        {
-          "id": 2,
-          "name": "Goku e Vejeta",
-          "email": "gojeta@gmail.com",
-          "phone": " (87) 9 9835-8234"
-        },
-        {
-          "id": 3,
-          "name": "spiderman",
-          "email": "aranha@gmail.com",
-          "phone": " (83) 9 9835-8234"
-        },
-        {
-          "id": 4,
-          "name": "Lufy Gomo Foguete",
-          "email": "gomo@gmail.com",
-          "phone": " (83) 9 9835-8234"
-        },
-        {
-          "id": 5,
-          "name": "Tony Stark",
-          "email": "ironman@gmail.com",
-          "phone": " (83) 9 9835-8234"
-        },
-        {
-          "id": 6,
-          "name": "Steve Rogers",
-          "email": "capitao@gmail.com",
-          "phone": " (83) 9 9835-8234"
-        }
-      ]
-
-    const customers = [
-        {
-          "id": 1,
-          "name": "Bruno Salvador",
-          "email": "bruno@gmail.com",
-          "phone": " (87) 9 9635-8234"
-        },
-        {
-          "id": 2,
-          "name": "Allan Rafael de Oliveira",
-          "email": "allan@gmail.com",
-          "phone": " (87) 9 9835-8234"
-        },
-        {
-          "id": 3,
-          "name": "David Danilo",
-          "email": "davi@gmail.com",
-          "phone": " (83) 9 9835-8234"
-        },
-        {
-          "id": 4,
-          "name": "Lucas dos Santos",
-          "email": "lulu@gmail.com",
-          "phone": " (83) 9 9835-8234"
-        },
-        {
-          "id": 5,
-          "name": "Taina da Silva",
-          "email": "tata@gmail.com",
-          "phone": " (83) 9 9835-8234"
-        }
-      ]
-
     useEffect(() => {
+        getSellers();
+        getCustomers();
+
         if (!id) return
-    
-        const sale = axios.get(`https://653c42afd5d6790f5ec7e632.mockapi.io/vendas/${id}`).then(
+
+        axios.get(`/sales/${id}`).then(
             response => {
-                setDate(moment(response.data.saleDate).format("DD/MM/YYYY - HH:mm"))
-                axios.get(`${baseUrl}/clientes/1`).then(
-                    reponseCustomer => setCustomer(
-                        {
-                            value: reponseCustomer.data.id,
-                            label: `${reponseCustomer.data.id} - ${reponseCustomer.data.name}`
+                const data = response.data
+                setDate(data.date)
+                setInvoice(data.invoice)
+                setSalesTotal(data.total)
+                setSeller({value:data.seller_id, label: data.seller_code + ' - ' + data.seller_name})
+                setCustomer({value:data.customer_id, label: data.customer_code + ' - ' + data.customer_name})
+                setAddedProducts(
+                    data.items.map((p) => (
+                        { 
+                            value: p.product_id,
+                            label: `${p.product_code} - ${p.product_name}`,
+                            price: p.product_price,
+                            quantity: p.quantity
                         }
-                    )
-                )
-                axios.get(`${baseUrl}/vendedores/1`).then(
-                    reponseSeller => setSeller(
-                        {
-                            value: reponseSeller.data.id,
-                            label: `${reponseSeller.data.id} - ${reponseSeller.data.name}`}
-                    )
-                )
-                setInvoice(response.data.invoice)
-                setSalesTotal(response.data.totalValue)
-                setAddedProducts(response.data.items || [])
+                    )))
             }
         )
-    
-        if (!sale) return
 
+    }, [id])
 
-    }, [id, baseUrl])
+    const getSellers = () => {
+        axios.get("/sellers").then(
+            response => {
+                const sellers = response.data.map((seller) => (
+                    { value: seller.seller_id, label: `${seller.code} - ${seller.name}` }
+                ))
+                setSellerList(sellers)
+            }
+        )
+    }
+
+    const getCustomers = () => {
+        axios.get("/customers").then(
+            response => {
+                const customers = response.data.map((customer) => (
+                    { value: customer.customer_id, label: `${customer.code} - ${customer.name}` }
+                ))
+                setCustomerList(customers)
+            }
+        )
+    }
 
     const saveData = (e) => {
         e.preventDefault()
-        const jsonItems = addedProducts.map((p) => (
+        const items = addedProducts.map((p) => (
             {
-                id: p.product.value,
-                unitPrice: p.product.price,
-                description: p.product.label,
-                quantity: p.quantity,
-                total: p.total
+                product_id: p.value,
+                quantity: p.quantity
             }
-        ))
-        axios.post(`https://653c42afd5d6790f5ec7e632.mockapi.io/vendas`, {
-            invoice: Math.floor(Math.random() * 1000),
-            seller: seller.label,
-            customer: customer.label,
-            dateSale: date,
-            totalValue: salesTotal,
-            saleItems: jsonItems
-        }).then(() => {
+        ));
+        axios.post("/sales", {
+            sale_id: id,
+            seller_id: seller.value,
+            customer_id: customer.value,
+            date: date,
+            total: salesTotal,
+            items: items
+        }).then((response) => {
             navigate("/vendas")
             setTimeout(() => {
                 toast.success(
@@ -164,14 +108,15 @@ const SalesForm = () => {
         let products = [...addedProducts, addedProduct]
         setAddedProducts(products)
         setSalesTotal(
-            products.reduce((total, product) => { return total + product.total }, 0)
+            products.reduce(
+                (total, product) => { return total + product.price * product.quantity }, 0)
         )
     }
 
     const onDelete = (product) => {
-        var newListProducts = addedProducts.filter(function(e) { return e.product.value !== product.product.value })
+        var newListProducts = addedProducts.filter(function(e) { return e.value !== product.value })
         setAddedProducts([...newListProducts])
-        setSalesTotal(salesTotal - product.total)
+        setSalesTotal(salesTotal - product.price * product.quantity)
     }
 
     return (
@@ -203,7 +148,7 @@ const SalesForm = () => {
                                             type="text"
                                             id="saleDateDisabled"
                                             disabled={true}
-                                            value={date}
+                                            value={moment(date).format("DD/MM/YYYY - HH:mm")}
                                             aria-describedby="saleDateDisabledHelpBlock"
                                         />
                                     </div>
@@ -211,17 +156,15 @@ const SalesForm = () => {
                                         id="selectSeller"
                                         label='Escolha um vendedor'
                                         value={seller}
-                                        items={sellers}
+                                        items={sellerList}
                                         onChanged={seller => setSeller(seller)}
-                                        url={baseUrl + '/vendedores'}
                                     />
                                     <SelectDropdown
                                         id="selectCustomer"
                                         label='Escolha um cliente'
                                         value={customer}
-                                        items={customers}
+                                        items={customerList}
                                         onChanged={customer => setCustomer(customer)}
-                                        url={baseUrl + '/clientes'}
                                     />
                                 </div>
                                 <div className="pt-5">
