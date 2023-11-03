@@ -24,10 +24,9 @@ Na infraestrutura há o backend feito em python e django que fornece os dados at
         $ cd papelaria-hipo/
 
 
-#### 2. No diretório backend, criar uma cópia do arquivo `.env.example` com o nome `.env` e defina uma nova senha para a variável SECRET_KEY. Isso aumeta a segurança do projeto:
+#### 2. Criar uma cópia do arquivo `.env.example` com o nome `.env` e defina uma nova senha para a variável SECRET_KEY. Isso aumeta a segurança do projeto:
 
 ```shell script
-cd backend
 cp .env.example .env
 ```
 ```shell script
