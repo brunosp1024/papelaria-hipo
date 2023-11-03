@@ -76,17 +76,17 @@ const List = () => {
                 <Table className='mt-3'>
                     <thead style={{position: 'sticky', top: 0}}>
                         <tr>
-                        <th>Nota Fiscal</th>
-                        <th>Cliente</th>
-                        <th>Vendedor</th>
-                        <th>Data da Venda</th>
-                        <th>Valor Total</th>
-                        <th>Ações</th>
+                          <th>Nota Fiscal</th>
+                          <th>Cliente</th>
+                          <th>Vendedor</th>
+                          <th>Data da Venda</th>
+                          <th>Valor Total</th>
+                          <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         {salesList.length ? salesList.map((sale) => (
-                            <Fragment key={sale.id}>
+                            <Fragment key={sale.sale_id}>
                                 <tr>
                                     <td>{sale.invoice}</td>
                                     <td>{sale.customer}</td>
@@ -94,18 +94,18 @@ const List = () => {
                                     <td>{moment(sale.saleDate).format("DD/MM/YYYY - HH:mm")}</td>
                                     <td>{formatToCurrencyBr(sale.total)}</td>
                                     <td>
-                                        <span className="more-items" data-toggle="collapse" onClick={() => hadleCollapse(sale.id)}
-                                            data-target={`.sale-${sale.id}`} aria-controls={`multiCollapse${sale.id}`}>
-                                                <span className={`text-more-${sale.id}`}>Ver mais</span>
+                                        <span className="more-items" data-toggle="collapse" onClick={() => hadleCollapse(sale.sale_id)}
+                                            data-target={`.sale-${sale.sale_id}`} aria-controls={`multiCollapse${sale.sale_id}`}>
+                                                <span className={`text-more-${sale.sale_id}`}>Ver mais</span>
                                         </span>
-                                        <Link to={`/vendas/${sale.id}/atualizar`}>
+                                        <Link to={`/vendas/${sale.sale_id}/atualizar`}>
                                             <FaEdit className='mx-4'/>
                                         </Link>
-                                        <span className="text-danger cursor-pointer" onClick={() => handleDelete(sale.id)}><FaTrash /></span>
+                                        <span className="text-danger cursor-pointer" onClick={() => handleDelete(sale.sale_id)}><FaTrash /></span>
                                     </td>
                                 </tr>
                                 {sale.items ? (
-                                    <tr className={`child-list mt-3 collapse sale-${sale.id}`} id={`multiCollapse${sale.id}`}>
+                                    <tr className={`child-list mt-3 collapse sale-${sale.sale_id}`} id={`multiCollapse${sale.sale_id}`}>
                                         <td colSpan={6}>
                                             <Table>
                                                 <thead>
