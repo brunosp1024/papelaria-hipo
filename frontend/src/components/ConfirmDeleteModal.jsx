@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../axios.js';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { IoAlertCircle } from "react-icons/io5";
@@ -22,7 +22,7 @@ const ConfirmeDeleteModal = (props) => {
           <Modal.Title><IoAlertCircle className='me-2 fs-2 mb-1 text-danger'/>Excluir item</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            O item será excluido permanentemente. Deseja Continuar?
+            Essa venda será excluida permanentemente com todos os seus itens. Deseja Continuar?
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={props.handleClose}>
