@@ -1,0 +1,82 @@
+[
+    {
+        "model": "sale.saleitem",
+        "pk": "1e498365-8d3e-418c-9287-f350c4537972",
+        "fields": {
+            "deleted_at": null,
+            "sale": "a2d15278-b8cd-417c-9131-5179f87ff751",
+            "product": "13872b29-c76a-4e50-aee4-1f1178365319",
+            "quantity": 4
+        }
+    },
+    {
+        "model": "sale.saleitem",
+        "pk": "3992d201-6003-47a4-9914-1a08ee5a2a33",
+        "fields": {
+            "deleted_at": null,
+            "sale": "c083af2e-31ad-4a0b-8b27-6668a6db58c8",
+            "product": "13872b29-c76a-4e50-aee4-1f1178365327",
+            "quantity": 9
+        }
+    },
+    {
+        "model": "sale.saleitem",
+        "pk": "3b15d5ab-ce03-461d-9036-dbf739a6ae56",
+        "fields": {
+            "deleted_at": null,
+            "sale": "374e59f4-afb3-49f9-b20a-91fe201c5ff0",
+            "product": "13872b29-c76a-4e50-aee4-1f1178365319",
+            "quantity": 4
+        }
+    },
+    {
+        "model": "sale.saleitem",
+        "pk": "6425b253-c6f2-403e-ab02-888867e6f5ac",
+        "fields": {
+            "deleted_at": null,
+            "sale": "a2d15278-b8cd-417c-9131-5179f87ff751",
+            "product": "13872b29-c76a-4e50-aee4-1f1178365330",
+            "quantity": 3
+        }
+    },
+    {
+        "model": "sale.saleitem",
+        "pk": "658bc018-8485-4c5c-881f-ae59c97f2055",
+        "fields": {
+            "deleted_at": null,
+            "sale": "374e59f4-afb3-49f9-b20a-91fe201c5ff0",
+            "product": "13872b29-c76a-4e50-aee4-1f1178365356",
+            "quantity": 6
+        }
+    },
+    {
+        "model": "sale.saleitem",
+        "pk": "c0d058e6-44a2-436b-afbf-b287af97d2b7",
+        "fields": {
+            "deleted_at": null,
+            "sale": "a2d15278-b8cd-417c-9131-5179f87ff751",
+            "product": "13872b29-c76a-4e50-aee4-1f1178365357",
+            "quantity": 5
+        }
+    },
+    {
+        "model": "sale.saleitem",
+        "pk": "db82c11c-930e-402f-b093-2ff2e2d6e60b",
+        "fields": {
+            "deleted_at": null,
+            "sale": "374e59f4-afb3-49f9-b20a-91fe201c5ff0",
+            "product": "13872b29-c76a-4e50-aee4-1f1178365357",
+            "quantity": 3
+        }
+    },
+    {
+        "model": "sale.saleitem",
+        "pk": "fcb9c918-a598-4597-9f85-0bf4ccb79564",
+        "fields": {
+            "deleted_at": null,
+            "sale": "c083af2e-31ad-4a0b-8b27-6668a6db58c8",
+            "product": "13872b29-c76a-4e50-aee4-1f1178365356",
+            "quantity": 7
+        }
+    }
+]

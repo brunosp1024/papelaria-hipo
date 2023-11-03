@@ -1,0 +1,41 @@
+[
+    {
+        "model": "sale.sale",
+        "pk": "374e59f4-afb3-49f9-b20a-91fe201c5ff0",
+        "fields": {
+            "deleted_at": null,
+            "customer": "13872b29-c16a-4e50-aee4-1f1178365357",
+            "seller": "13872b29-c17a-4e50-aee4-1f1178365356",
+            "invoice": "419785898",
+            "date": "2023-11-03T21:06:05.654Z",
+            "total": "492.00",
+            "commission_total": "20.82"
+        }
+    },
+    {
+        "model": "sale.sale",
+        "pk": "a2d15278-b8cd-417c-9131-5179f87ff751",
+        "fields": {
+            "deleted_at": null,
+            "customer": "13872b29-c17a-4e50-aee4-1f1178365356",
+            "seller": "13872b29-c14a-4e50-aee4-1f1178365359",
+            "invoice": "269169609",
+            "date": "2023-11-03T21:04:01.736Z",
+            "total": "565.00",
+            "commission_total": "23.85"
+        }
+    },
+    {
+        "model": "sale.sale",
+        "pk": "c083af2e-31ad-4a0b-8b27-6668a6db58c8",
+        "fields": {
+            "deleted_at": null,
+            "customer": "13872b29-c15a-4e50-aee4-1f1178365358",
+            "seller": "13872b29-c14a-4e50-aee4-1f1178365359",
+            "invoice": "247841675",
+            "date": "2023-11-03T21:04:39.988Z",
+            "total": "763.00",
+            "commission_total": "40.46"
+        }
+    }
+]
