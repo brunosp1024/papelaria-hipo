@@ -9,7 +9,7 @@ class SaleItemSerializer(serializers.ModelSerializer):
     product_price = serializers.CharField(source='product.unit_price', read_only=True)
     product_code = serializers.CharField(source='product.code', read_only=True)
     product_commission = serializers.CharField(
-        source='product.commission_percentage', read_only=True
+        source='day_commission_percentage', read_only=True
     )
 
     class Meta:

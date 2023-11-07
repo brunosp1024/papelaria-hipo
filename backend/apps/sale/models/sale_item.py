@@ -14,6 +14,7 @@ class SaleItem(DeletedMixin):
     )
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=False, blank=False)
     quantity = models.PositiveIntegerField()
+    day_commission_percentage = models.DecimalField(max_digits=4, decimal_places=2, null=True)
 
     class Meta:
         db_table = 'sale_item'
@@ -30,4 +31,9 @@ class SaleItem(DeletedMixin):
 
     @property
     def commission_total(self):
-        return self.item_total * self.product.commission_percentage/100
+        if self.day_commission_percentage:
+            commission = self.day_commission_percentage
+        else:
+            commission = self.product.commission_percentage
+
+        return self.item_total * commission/100
