@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from apps.sale.models.sale_item import SaleItem
+from apps.sale.models import CommissionSetup
 from .models import Sale
 
 
@@ -23,3 +24,10 @@ class SaleItemAdmin(admin.ModelAdmin):
 
 admin.site.register(SaleItem, SaleItemAdmin)
 
+
+class CommissionSetupAdmin(admin.ModelAdmin):
+    list_display = ('commission_setup_id', 'min_percentage', 'max_percentage')
+    list_display_links = ('commission_setup_id',)
+    list_per_page = 20
+
+admin.site.register(CommissionSetup, CommissionSetupAdmin)
