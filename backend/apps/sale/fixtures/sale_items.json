@@ -6,7 +6,8 @@
             "deleted_at": null,
             "sale": "a2d15278-b8cd-417c-9131-5179f87ff751",
             "product": "13872b29-c76a-4e50-aee4-1f1178365319",
-            "quantity": 4
+            "quantity": 4,
+            "day_commission_percentage": 4
         }
     },
     {
@@ -16,7 +17,8 @@
             "deleted_at": null,
             "sale": "c083af2e-31ad-4a0b-8b27-6668a6db58c8",
             "product": "13872b29-c76a-4e50-aee4-1f1178365327",
-            "quantity": 9
+            "quantity": 9,
+            "day_commission_percentage": 3
         }
     },
     {
@@ -26,7 +28,8 @@
             "deleted_at": null,
             "sale": "374e59f4-afb3-49f9-b20a-91fe201c5ff0",
             "product": "13872b29-c76a-4e50-aee4-1f1178365319",
-            "quantity": 4
+            "quantity": 4,
+            "day_commission_percentage": 7
         }
     },
     {
@@ -36,7 +39,8 @@
             "deleted_at": null,
             "sale": "a2d15278-b8cd-417c-9131-5179f87ff751",
             "product": "13872b29-c76a-4e50-aee4-1f1178365330",
-            "quantity": 3
+            "quantity": 3,
+            "day_commission_percentage": 8
         }
     },
     {
@@ -46,7 +50,8 @@
             "deleted_at": null,
             "sale": "374e59f4-afb3-49f9-b20a-91fe201c5ff0",
             "product": "13872b29-c76a-4e50-aee4-1f1178365356",
-            "quantity": 6
+            "quantity": 6,
+            "day_commission_percentage": 2
         }
     },
     {
@@ -56,7 +61,8 @@
             "deleted_at": null,
             "sale": "a2d15278-b8cd-417c-9131-5179f87ff751",
             "product": "13872b29-c76a-4e50-aee4-1f1178365357",
-            "quantity": 5
+            "quantity": 5,
+            "day_commission_percentage": 1
         }
     },
     {
@@ -66,7 +72,8 @@
             "deleted_at": null,
             "sale": "374e59f4-afb3-49f9-b20a-91fe201c5ff0",
             "product": "13872b29-c76a-4e50-aee4-1f1178365357",
-            "quantity": 3
+            "quantity": 3,
+            "day_commission_percentage": 6
         }
     },
     {
@@ -76,7 +83,8 @@
             "deleted_at": null,
             "sale": "c083af2e-31ad-4a0b-8b27-6668a6db58c8",
             "product": "13872b29-c76a-4e50-aee4-1f1178365356",
-            "quantity": 7
+            "quantity": 7,
+            "day_commission_percentage": 7
         }
     }
 ]
