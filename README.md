@@ -45,31 +45,18 @@ SECRET_KEY=exemplo_nova_senhai3du7_6q39ydd0!ov$^tn%
 docker-compose up
 ```
 
+#### 5. Acessando a área administrativa do django
 
-#### 5. Aplicar as migrations no banco de dados
-
-```shell script
-docker-compose exec api python manage.py migrate
-```
-
-
-#### 6. Executar as fixtures para carregar os dados no banco. Seguir a ordem.
+Para acessar o django admin, crie um superuser e acesse o endereço url no navegador, digitando as credenciais definidas para o superuser.
 
 ```shell script
-docker-compose exec api python manage.py loaddata products.json
+docker-compose exec api python manage.py createsuperuser
 ```
+
 ```shell script
-docker-compose exec api python manage.py loaddata sellers.json
+http://localhost:8000/admin
 ```
-```shell script
-docker-compose exec api python manage.py loaddata customers.json
-```
-```shell script
-docker-compose exec api python manage.py loaddata sales.json
-```
-```shell script
-docker-compose exec api python manage.py loaddata sale_items.json
-```
+
 
 ## Endereço para acessar o sistema no navegador
 
